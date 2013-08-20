@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:columnCount="3"
+    android:orientation="horizontal" >
+
+    <FrameLayout
+        android:id="@+id/camera_preview1"
+        android:layout_width="640dp"
+        android:layout_height="480dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="fill_horizontal" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/camera_preview2"
+        android:layout_width="640dp"
+        android:layout_height="480dp"
+        android:layout_alignTop="@+id/camera_preview1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_toRightOf="@+id/camera_preview1" >
+    </FrameLayout>
+
+    <RadioButton
+        android:id="@+id/radioButton_Reduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_capture"
+        android:layout_below="@+id/radioButton_Normal"
+        android:text="@string/radio_reflection"
+        android:textColor="@color/white" />
+
+    <RadioButton
+        android:id="@+id/radioButton_Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_capture"
+        android:layout_below="@+id/button_capture"
+        android:layout_marginTop="10dp"
+        android:text="@string/radio_normal"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button_capture"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/camera_preview1"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/gray"
+        android:text="@string/capture" />
+
+    <Button
+        android:id="@+id/button_number"
+        android:layout_width="230dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_alignBottom="@+id/button_capture"
+        android:background="@color/gray"
+        android:text="@string/get_number" />
+
+    <TextView
+        android:id="@+id/textView_number"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/button_number"
+        android:layout_below="@+id/button_number"
+        android:layout_marginTop="10dp"
+        android:text="There are "
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="240dp"
+        android:layout_height="180dp"
+        android:layout_alignTop="@+id/button_capture"
+        android:layout_marginLeft="80dp"
+        android:layout_toRightOf="@+id/button_capture" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="240dp"
+        android:layout_height="180dp"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_toRightOf="@+id/imageView1" />
+
+    <Button
+        android:id="@+id/button_browse1"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/imageView1"
+        android:layout_alignLeft="@+id/imageView1"
+        android:background="@color/gray"
+        android:text="@string/browse" />
+    
+    <Button
+        android:id="@+id/button_browse2"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/imageView2"
+        android:layout_alignLeft="@+id/imageView2"
+        android:background="@color/gray"
+        android:text="@string/browse" />
+
+    <Button
+        android:id="@+id/button_process"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2"
+        android:background="@color/gray"
+        android:text="@string/process" />
+
+    <Button
+        android:id="@+id/button_cameraOpenClose"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/radioButton_Reduction"
+        android:layout_below="@+id/radioButton_Reduction"
+        android:background="@color/gray"
+        android:text="@string/openCamera" />
+
+</RelativeLayout>

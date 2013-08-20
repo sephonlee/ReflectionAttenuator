@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">ReflectionAttenuator</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="radio_reflection">Reduce Relfection</string>
+    <string name="radio_normal">Normal Relfection</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="capture">Capture</string>
+    <string name="get_number">Get Camera Quantities</string>
+    <string name="browse">Browse</string>
+    <string name="process">Process Images</string>
+    <string name="title_activity_img_process">ImgProcess</string>
+    <string name="SteTrans">Stereo Transfrom</string>
+    <string name="RefnRedn">Reflection Reduction</string>
+	<string name="saveImg">Save Result</string>
+	<string name="saveAllImg">Save All Images</string>
+	<string name="radio_crossCheck">Cross Check</string>
+	<string name="radio_distanceCheck">Distance Check</string>
+	<string name="radio_localCheck">Local Check</string>
+	<string name="reset">Reset</string>
+	<string name="testing">testing</string>
+	<string name="openCamera">Open Camera</string>
+	
+	
+</resources>

@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" >
+
+    <ImageView
+        android:id="@+id/imageView_ori1"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="fill_horizontal" />
+
+    <ImageView
+        android:id="@+id/imageView_ori2"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView_ori1" />
+
+    <ImageView
+        android:id="@+id/imageView_tran1"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:layout_below="@+id/imageView_ori1"
+        android:layout_toLeftOf="@+id/imageView_ori2" />
+
+    <ImageView
+        android:id="@+id/imageView_tran2"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:layout_alignTop="@+id/imageView_tran1"
+        android:layout_toRightOf="@+id/imageView_tran1" />
+
+    <ImageView
+        android:id="@+id/imageView_result"
+        android:layout_width="640dp"
+        android:layout_height="480dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView_ori2" />
+
+    <Button
+        android:id="@+id/button_trans"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView_tran1"
+        android:layout_marginTop="35dp"
+        android:layout_toLeftOf="@+id/imageView_tran2"
+        android:background="@color/gray"
+        android:text="@string/SteTrans" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView_tran2"
+        android:layout_alignTop="@+id/button_trans"
+        android:layout_marginLeft="31dp"
+        android:background="@color/gray"
+        android:text="@string/reset" />
+
+    <Button
+        android:id="@+id/button_redn"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_trans"
+        android:layout_alignBottom="@+id/button_trans"
+        android:layout_toLeftOf="@+id/imageView_result"
+        android:background="@color/gray"
+        android:text="@string/RefnRedn" />
+
+    <Button
+        android:id="@+id/button_saveImg"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_redn"
+        android:layout_alignLeft="@+id/imageView_result"
+        android:layout_marginLeft="150dp"
+        android:background="@color/gray"
+        android:text="@string/saveImg" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroup_matchesCheck"
+        android:layout_width="150px"
+        android:layout_height="100px"
+        android:layout_alignLeft="@+id/button_trans"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/button_trans"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/radio_crossCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_crossCheck"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radio_localCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_localCheck"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radio_distanceCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_distanceCheck"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <!--
+         <Button
+        android:id="@+id/button_saveAllImg"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBar1"
+        android:layout_alignLeft="@+id/button_saveImg"
+        android:background="@color/gray"
+        android:text="@string/saveAllImg" />
+    -->
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_redn"
+        android:layout_alignTop="@+id/RadioGroup_matchesCheck"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:id="@+id/seekBarValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seekBar"
+        android:layout_below="@+id/seekBar"
+        android:layout_marginTop="22dp"
+        android:text="Seekbar Value = 10"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button_testing"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBarValueText"
+        android:layout_alignLeft="@+id/button_saveImg"
+        android:background="@color/gray"
+        android:text="@string/testing" />
+
+</RelativeLayout>
